@@ -9,8 +9,9 @@ var env = Object.create(process.env);
 var args = process.argv.length > 2 ? ' '+process.argv.slice(2).join(' ') : '';
 
 try {
+  var ext = os.platform() == 'windows' ? '.exe' : '';
   childProcess.execSync(
-    path.resolve(__dirname, '../vendor/go-qtc-'+os.platform()+args),
+    path.resolve(__dirname, '../vendor/go-qtc-'+os.platform()+ext+args),
     { env: env }
   );
 } catch (e) {
