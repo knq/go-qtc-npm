@@ -1,7 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-SRC=$(realpath $(cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../)
+var os = require('os');
+var path = require('path');
+var process = require('process');
+var childProcess = require('child_process');
 
-PLATFORM=$(uname|tr '[A-Z]' '[a-z]')
+var env = Object.create(process.env);
+var args = process.argv.length > 2 ? ' '+process.argv.slice(2).join(' ') : '';
 
-$SRC/vendor/go-qtc-$PLATFORM $@
+try {
+  childProcess.execSync(
+    path.resolve(__dirname, '../vendor/go-qtc-'+os.platform()+args),
+    { env: env }
+  );
+} catch (e) {
+  process.exit(e.status);
+}
