@@ -1,6 +1,6 @@
 {
   "name": "go-qtc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NodeJS package for using qtc in application builds",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "qtc",
     "gulp"
   ],
+  "bin": "./bin/qtc",
   "author": "Kenneth Shaw <kenneth.shaw@knq.io>",
   "license": "MIT",
   "bugs": {
