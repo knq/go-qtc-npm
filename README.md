@@ -2,7 +2,7 @@
 
 go-qtc is a simple nodejs package that bundles binary versions of
 [qtc](https://github.com/valyala/quicktemplate). The version of qtc made
-available in this package supports {% end %} tag syntax, and thus is not the
+available in this package supports `{% end %}` tag syntax, and thus is not the
 default qtc binary. Binary versions of qtc for Linux and OS X (darwin) are
 included in this package.
 
@@ -17,6 +17,11 @@ Install package via npm:
 
 ```bash
 npm install --save go-qtc
+```
+
+Install package via yarn:
+```bash
+yarn add go-qtc
 ```
 
 ## Using ##
