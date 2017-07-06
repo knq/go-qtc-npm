@@ -1,6 +1,6 @@
 {
   "name": "go-qtc",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "NodeJS package for using qtc in application builds",
   "main": "index.js",
   "scripts": {
